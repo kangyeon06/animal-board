@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>동물 게시판</title>
+        <style>
+            .a{
+                display: flex;
+                justify-content: center;
+                background-color: beige;
+            }
+            table{
+                margin: auto;
+                width: 900px;
+                border-radius: 5px;
+                border-collapse: collapse;
+                border-top: none;
+            }
+            .table_subtitle{
+                 background-color: skyblue;
+                 text-align: center;
+            }
+            .table tr, .table td{
+                border-bottom: 1px lightgray solid;
+                height: 30px;
+                font-size: 14px;
+            }
+            .subtitle_number{
+                width:  50px;
+            }
+            .subtile_title{
+                width: 500px;
+            }
+            .body{
+                text-align: center;
+            }
+            .body .body_title{
+                text-align: left;
+            }
+            button{
+                width: 100px;
+                height: 40px;
+                background-color: rgb(164, 199, 255);
+                font-size: 15px;
+                border: 0;
+                outline: 1.5px rgb(68, 136, 244) solid;
+                border-radius: 5px;
+                padding-left: 10px;
+            }
+            button:active {
+                width: 100px;
+                height: 40px;
+                font-size: 15px;
+                border: 0;
+                border-radius: 5px;
+                outline: 1.5px rgb(27, 76, 155) solid;
+                padding-left: 10px;
+                background-color: rgb(68, 136, 244);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="a">
+                <div class="a_title"><h1>동물 게시판</h1></div>
+            </div>    
+        </header>
+        <main>
+            <table class="table">
+                <tr><td class="table_title"><h3>게시판</h3></td></tr>
+                <tr class="table_subtitle">
+                    <td class="subtitle_number">번호</td>
+                    <td class="subtitle_title">제목</td>
+                    <td class="subtitle_write">작성자</td>
+                    <td class="subtitle_write">작성날짜</td>
+                </tr>
+                <script>
+                    var a, day = 20;
+                    for (a = 10; a > 0; a--){
+                        document.write("<tr class='body'>");
+                        document.write("<td>" + a + "</td>");
+                        document.write("<td class = 'body_title'>제목입니다.</td>");
+                        document.write("<td>작성자</td>");
+                        document.write("<td>24-06-" + day-- + "</td>");
+                        document.write("</tr>");
+                    }
+                </script>
+            </table>
+            <br>
+            <table>
+                <tr>
+                    <td><button onclick="location.href='게시판글쓰기.html'">글쓰기</button></td>
+                </tr>
+            </table>
+        </main>
+    </body>
+</html>
